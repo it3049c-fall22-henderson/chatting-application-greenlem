@@ -71,3 +71,12 @@ function sendMessages(username, text) {
       body: JSON.stringify(newMessage)
   });
 }
+
+sendButton.addEventListener("click", function(sendButtonClickEvent) {
+  sendButtonClickEvent.preventDefault();
+  const sender = nameInput.value;
+  const message = myMessage.value;
+
+  sendMessages(sender,message);
+  myMessage.value = "";
+});
