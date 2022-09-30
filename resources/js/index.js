@@ -80,3 +80,19 @@ sendButton.addEventListener("click", function(sendButtonClickEvent) {
   sendMessages(sender,message);
   myMessage.value = "";
 });
+
+localStorage.setItem('nameSet', JSON.stringify(nameInput));
+
+localData;
+localData = JSON.parse(localStorage.getItem('nameSet'));
+
+function checkName(){
+    var f = nameInput;
+    var canSubmit = true;
+
+    for ( var i = 0; i < f.clientHeight; i++) {
+        if (f[i].value.length == 0)
+        canSubmit = false;
+    }
+    document.getElementById('my-name-input').disabled = !canSubmit;
+}
