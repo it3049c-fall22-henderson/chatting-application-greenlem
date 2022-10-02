@@ -1,6 +1,7 @@
 const nameInput = document.getElementById("my-name-input");
 const myMessage = document.getElementById("my-message");
 const sendButton = document.getElementById("send-button");
+const saveButton = document.getElementById("save-Button");
 const chatBox = document.getElementById("chat");
 const serverURL = `https://it3049c-chat-application.herokuapp.com/messages`;
 
@@ -81,10 +82,10 @@ sendButton.addEventListener("click", function(sendButtonClickEvent) {
   myMessage.value = "";
 });
 
-localStorage.setItem('nameSet', JSON.stringify(nameInput));
+//localStorage.setItem('nameSet', JSON.stringify(nameInput));
 
-localData;
-localData = JSON.parse(localStorage.getItem('nameSet'));
+//localData;
+//localData = JSON.parse(localStorage.getItem('nameSet'));
 
 function checkName(){
     var f = nameInput;
@@ -96,3 +97,12 @@ function checkName(){
     }
     document.getElementById('my-name-input').disabled = !canSubmit;
 }
+
+saveButton.addEventListener("click", function (saveButtonClickEvent){
+    saveButtonClickEvent.preventDefault();
+    
+    localStorage.setItem('nameSet', JSON.stringify(nameInput));
+
+    localData;
+    localData = JSON.parse(localStorage.getItem('nameSet'));
+});
