@@ -13,9 +13,9 @@ how many points out of 20 do you deserve on this assignment: 17/20
 
 ## Self-Reflection:
 <!-- Write your self-reflection under this line -->
-Need to revisit some of the DOM material, but I think this lab was pretty straight forward
+Storage seems pretty straight forward, slightly confused on updating storage from the user standpoint if the button is getting the most recent name input it should work.
 ### How long it took me to finish this?
-2 hours ish
+1-1.5 hous
 
 ## Discussion Questions:
 1. What does the bootstrap `display-4` class do?
